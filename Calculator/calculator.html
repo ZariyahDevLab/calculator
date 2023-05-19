@@ -1,42 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>JavaScript Calculator</title>
+        <title>Simple Calculator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="calculator.css">
     </head>
     <body>
         <h1>JavaScript Calculator</h1>
-        <input type="text" id="result" disabled> <!--disable is used to disable input field-->
-        <table>
-            <tr> <!--table row-->
-                <td><button onclick="addToResult('7')">7</button></td> <!--table data cell/number buttons-->
-                <td><button onclick="addToResult('8')">8</button></td>
-                <td><button onclick="addToResult('9')">9</button></td>
-                <td><button onclick="addToResult('/')">/</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="addToResult('4')">4</button></td>
-                <td><button onclick="addToResult('5')">5</button></td>
-                <td><button onclick="addToResult('6')">6</button></td>
-                <td><button onclick="addToResult('*')">*</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="addToResult('1')">1</button></td>
-                <td><button onclick="addToResult('2')">2</button></td>
-                <td><button onclick="addToResult('3')">3</button></td>
-                <td><button onclick="addToResult('-')">-</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="addToResult('0')">0</button></td>
-                <td><button onclick="addToResult('.')">.</button></td>
-                <td><button onclick="addToResult()">=</button></td>
-                <td><button onclick="addToResult('+')">+</button></td>
-            </tr>
-            <tr>
-                <td><button onclick="clearResult()">C</button></td>
-            </tr>
-        </table>
-        <script src="calculator.js"></script>
+        <div class="container">
+            <div class="display" id="display">
+                <input class="display" type="text" title="input field" id="result" readonly> <!--disable is used to disable input field-->
+            </div>
+            <div class="buttons">
+                <table>
+                    <tr> <!--table row-->
+                        <td><button class="btn num" onclick="addToResult('7')">7</button></td> <!--table data cell/number buttons-->
+                        <td><button class="btn num" onclick="addToResult('8')">8</button></td>
+                        <td><button class="btn num" onclick="addToResult('9')">9</button></td>
+                        <td><button class="btn opp" onclick="addToResult('/')">/</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn num" onclick="addToResult('4')">4</button></td>
+                        <td><button class="btn num" onclick="addToResult('5')">5</button></td>
+                        <td><button class="btn num" onclick="addToResult('6')">6</button></td>
+                        <td><button class="btn opp" onclick="addToResult('*')">*</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn num" onclick="addToResult('1')">1</button></td>
+                        <td><button class="btn num" onclick="addToResult('2')">2</button></td>
+                        <td><button class="btn num" onclick="addToResult('3')">3</button></td>
+                        <td><button class="btn opp" onclick="addToResult('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn num" onclick="addToResult('0')">0</button></td>
+                        <td><button class="btn num" onclick="addToResult('.')">.</button></td>
+                        <td><button class="btn opp" onclick="calculate()">=</button></td>
+                        <td><button class="btn opp" onclick="addToResult('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn opp" onclick="clearResult()">C</button></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script src="calculator.js">
+        </script>
     </body>
 </html>

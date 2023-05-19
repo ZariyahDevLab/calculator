@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    margin: auto;
+}
+
+
+input[type="text"] {
+    width: 105%;
+    height: 50%;
+    margin-bottom: 10px;
+}
+
+button {
+    width: 75px;
+    height: 50px;
+    margin: auto;
+    border-style: hidden;
+    border-radius: 50%;
+    line-height: 75%;
+}
+
+.num {
+    background-color: #7FFFD4;
+    
+}
+
+.opp {
+    background-color: #FFD53D;
+}
